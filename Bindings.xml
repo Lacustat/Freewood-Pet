@@ -1,5 +1,5 @@
 <Bindings>
-    <Binding name="FREEWOOD_PET_TAB" header="FREEWOOD_PET" category="ADDONS">
+    <Binding name="FREEWOOD_PET_TAB" header="FREEWOOD_PET" category="BINDING_CATEGORY_FREEWOOD">
         Freewood_ToggleTab("pet")
     </Binding>
 </Bindings>
