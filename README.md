@@ -1,6 +1,6 @@
 # Freewood-Pet
 
-**Deutsch & English · German & English.** Autor · Author: Lacustat. Version 0.3.4 · Interface 16001 (World of Warcraft: Forever).
+**Deutsch & English · German & English.** Autor · Author: Lacustat. Version 0.3.5 · Interface 16001 (World of Warcraft: Forever).
 
 ![PET](https://github.com/Lacustat/Freewood-OctoWoW-Bilder/blob/main/companion.jpg)
 
@@ -15,6 +15,7 @@
 Erfasst deine Jäger-Begleiter mit Werten, Familienfaktoren und Fähigkeiten, mit Export und Import.
 
 ### Funktionen
+- Ab 0.3.5: Begleiter mit leerem Realm im Schlüssel („Pinky-:Alice“) werden beim Anmelden in den richtigen Charakter übernommen (neuerer Stand gewinnt, das erste Sehen bleibt). Braucht Core 0.57.0. Test `tests/realmfix_test.lua`.
 - Ein Tier erscheint nach einem Aufruf im Spiel in der Liste.
 - Werte und Fähigkeiten pro Begleiter.
 - Export und Import über den Austausch im Core.
@@ -43,6 +44,7 @@ GPL-3.0, siehe `LICENSE`.
 Records your hunter companions with stats, family factors and abilities, with export and import.
 
 ### Features
+- Since 0.3.5: companions with an empty realm in their key ("Pinky-:Alice") are merged into the right character on login (newer state wins, first-seen kept). Needs Core 0.57.0. Test `tests/realmfix_test.lua`.
 - A pet appears in the list after you summon it in game.
 - Stats and abilities per companion.
 - Export and import via the exchange in Core.

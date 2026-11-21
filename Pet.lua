@@ -557,3 +557,40 @@ FW.Export.RegisterHandler("pets", {
         return Pet:ImportData(data)
     end,
 })
+
+------------------------------------------------------------------------
+-- Begleiter ohne Realm im Schluessel ("Pinky-:Alice") in den richtigen Charakter uebernehmen (0.3.5): Forever lieferte
+-- seit dem 20.11.2026 zeitweise einen leeren Realmnamen (Forever_Failure F-37). Bei doppelten Begleitern gewinnt der
+-- neuere Stand, das erste Sehen bleibt das fruehere.
+------------------------------------------------------------------------
+
+function Pet.FixEmptyRealm()
+    local U = FW.Util
+    local raw = FW.db and FW.db.modules and FW.db.modules.Pet
+    local pets = raw and raw.pets
+    local realm = U and U.NormalizedRealm and U.NormalizedRealm()
+    local name = _G.UnitName and _G.UnitName("player")
+    if type(pets) ~= "table" or not realm or type(name) ~= "string" or name == "" then return 0 end
+    local emptyPrefix, owner = name .. "-:", name .. "-" .. realm
+    local moved = 0
+    for key, rec in pairs(pets) do
+        if type(key) == "string" and key:sub(1, #emptyPrefix) == emptyPrefix then
+            local newKey = owner .. ":" .. key:sub(#emptyPrefix + 1)
+            local old = pets[newKey]
+            if type(rec) == "table" then rec.owner = owner end
+            if type(old) == "table" and type(rec) == "table" then
+                local first = math.min(tonumber(old.firstSeen) or math.huge, tonumber(rec.firstSeen) or math.huge)
+                if (tonumber(rec.updated) or 0) < (tonumber(old.updated) or 0) then rec = old end
+                if first ~= math.huge then rec.firstSeen = first end
+            end
+            pets[newKey] = rec
+            pets[key] = nil
+            moved = moved + 1
+        end
+    end
+    return moved
+end
+
+if FW.Util and FW.Util.OnRealmFix then
+    FW.Util.OnRealmFix("Begleiter", Pet.FixEmptyRealm)
+end

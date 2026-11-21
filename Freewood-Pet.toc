@@ -3,7 +3,7 @@
 ## Notes: Records your hunter companions with stats and abilities, with export and import.
 ## Notes-deDE: Erfasst deine Jäger-Begleiter mit Werten und Fähigkeiten, mit Export und Import.
 ## Author: Lacustat
-## Version: 0.3.4
+## Version: 0.3.5
 ## Dependencies: Freewood-Core
 ## IconTexture: Interface\Icons\Ability_Hunter_BeastTaming
 ## X-Wago-ID: nGv9m5Kx
