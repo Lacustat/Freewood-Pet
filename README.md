@@ -1,70 +1,58 @@
-# Freewood-Pet
+# Freewood Pet
 
-**Deutsch & English · German & English.** Autor · Author: Lacustat. Version 0.3.5 · Interface 16001 (World of Warcraft: Forever).
+**English · Deutsch** — Author: Lacustat · Version 0.3.5 · Interface 16001 (World of Warcraft: Forever)
 
-![PET](https://github.com/Lacustat/Freewood-OctoWoW-Bilder/blob/main/companion.jpg)
-
-## Inhalt · Contents
-- [Deutsch](#deutsch)
+## Contents · Inhalt
 - [English](#english)
-- [Tastenbelegung · Key bindings](#tastenbelegung--key-bindings)
-
-## Deutsch
-
-### Was ist das?
-Erfasst deine Jäger-Begleiter mit Werten, Familienfaktoren und Fähigkeiten, mit Export und Import.
-
-### Funktionen
-- Ab 0.3.5: Begleiter mit leerem Realm im Schlüssel („Pinky-:Alice“) werden beim Anmelden in den richtigen Charakter übernommen (neuerer Stand gewinnt, das erste Sehen bleibt). Braucht Core 0.57.0. Test `tests/realmfix_test.lua`.
-- Ein Tier erscheint nach einem Aufruf im Spiel in der Liste.
-- Werte und Fähigkeiten pro Begleiter.
-- Export und Import über den Austausch im Core.
-
-### Abhängigkeiten
-- Benötigt: `Freewood-Core`
-- Optional: –
-
-### Befehle
-- `/fwpet`: Reiter öffnen
-
-### Installation
-Den Ordner `Freewood-Pet` nach `World of Warcraft\_forever_\Interface\AddOns\` kopieren. Neue Dateien lädt das Spiel erst nach einem kompletten Neustart; ein `/reload` genügt nur, wenn sich bestehende Dateien geändert haben. Fehler sichtbar machen: `/console scriptErrors 1`, danach `/reload`.
-
-### Hinweise
-Alles Neue ist, soweit nicht anders vermerkt, im Spiel noch nicht geprüft (getestet wurde in einer Simulation).
-
-### Lizenz
-GPL-3.0, siehe `LICENSE`.
+  - [What is Freewood Pet?](#what-is-freewood-pet)
+  - [Features](#features)
+  - [Commands](#commands)
+  - [Requirements and installation](#requirements-and-installation)
+- [Deutsch](#deutsch)
+  - [Was ist Freewood Pet?](#was-ist-freewood-pet)
+  - [Funktionen](#funktionen)
+  - [Befehle](#befehle)
+  - [Voraussetzungen und Installation](#voraussetzungen-und-installation)
+- [Changelog · Änderungen](CHANGELOG.md)
 
 ---
 
 ## English
 
-### What is it?
-Records your hunter companions with stats, family factors and abilities, with export and import.
+### What is Freewood Pet?
+A record of your hunter companions: every pet you summon is stored with its stats, family factors and abilities.
 
 ### Features
-- Since 0.3.5: companions with an empty realm in their key ("Pinky-:Alice") are merged into the right character on login (newer state wins, first-seen kept). Needs Core 0.57.0. Test `tests/realmfix_test.lua`.
-- A pet appears in the list after you summon it in game.
-- Stats and abilities per companion.
-- Export and import via the exchange in Core.
-
-### Dependencies
-- Required: `Freewood-Core`
-- Optional: –
+- A pet appears in the list as soon as you summon it.
+- Stats and abilities per companion, for all your hunters.
+- Export and import through the Freewood exchange.
+- Needed by **Freewood Beasts**.
 
 ### Commands
-- `/fwpet`: Reiter öffnen
+- `/fwpet` – open the tab
 
-### Installation
-Copy the folder `Freewood-Pet` to `World of Warcraft\_forever_\Interface\AddOns\`. New files only load after a full game restart; a `/reload` is enough only when existing files changed. To see errors: `/console scriptErrors 1`, then `/reload`.
+### Requirements and installation
+- Required: **Freewood Core**.
+- Copy the folder `Freewood-Pet` into `World of Warcraft\_forever_\Interface\AddOns\`. Full game restart for new files.
+- Licence: GPL-3.0.
 
-### Notes
-Unless marked otherwise, everything new has not yet been verified in game (it was tested in a simulation).
+---
 
-### License
-GPL-3.0, see `LICENSE`.
+## Deutsch
 
-## Tastenbelegung · Key bindings
-**DE:** Unter Optionen > Tastaturbelegung gibt es einen eigenen Abschnitt für dieses Modul. Dort lässt sich eine Taste zum Öffnen und Schließen des Reiters belegen (zum Beispiel J für die Gilde). Ist der Reiter schon offen, schließt dieselbe Taste das Fenster. Nach der Installation einmal das Spiel neu starten, damit die neue Datei Bindings.xml gelesen wird.
-**EN:** Options > Key Bindings has its own section for this module. Bind a key to open and close the tab (for example J for the guild). If the tab is already open, the same key closes the window. Restart the game once after installing so the new Bindings.xml file is read.
+### Was ist Freewood Pet?
+Eine Übersicht deiner Jäger-Begleiter: Jedes Tier, das du rufst, wird mit seinen Werten, Familienfaktoren und Fähigkeiten gespeichert.
+
+### Funktionen
+- Ein Begleiter erscheint in der Liste, sobald du ihn rufst.
+- Werte und Fähigkeiten je Begleiter, für alle deine Jäger.
+- Export und Import über den Freewood-Austausch.
+- Wird von **Freewood Beasts** benötigt.
+
+### Befehle
+- `/fwpet` – Reiter öffnen
+
+### Voraussetzungen und Installation
+- Benötigt: **Freewood Core**.
+- Den Ordner `Freewood-Pet` nach `World of Warcraft\_forever_\Interface\AddOns\` kopieren. Bei neuen Dateien das Spiel komplett neu starten.
+- Lizenz: GPL-3.0.
